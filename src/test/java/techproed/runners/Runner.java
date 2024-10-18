@@ -13,7 +13,7 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = {"techproed/stepdefs"},
-        tags = "@api01",
+        tags = "@e2e",
         dryRun = false
 )
 public class Runner {
