@@ -47,6 +47,7 @@ public class DBRoomStepDefs {
         assertEquals(expectedDescription,actualDescription);
         assertEquals(expectedPrice,actualPrice);
 
+
         roomId = resultSet.getInt("id");
 
     }

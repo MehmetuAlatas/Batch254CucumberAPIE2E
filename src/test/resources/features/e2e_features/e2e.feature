@@ -1,5 +1,6 @@
-@e2e @u
+@u
 Feature: TC01 UI Creating a room on medunna
+
   Scenario Outline: TC01 Positive scenario
     Given the user navigates to the "baseUrl" website
     When the user clicks on the user icon
@@ -19,5 +20,15 @@ Feature: TC01 UI Creating a room on medunna
     Then verify A new Room is created succesfully
     And closes the application
     Examples:
-      | price    | description                          |
-      | 123.00   | End To End Test icin olusturulmustur |
+      | price  | description                          |
+      | 123.00 | End To End Test icin olusturulmustur |
+
+
+  Scenario: Testing the room via DB
+    Given Admin Connect to the Database
+    When send query for created room
+    Then validates created room from resultset
+
+  Scenario: Valiadate with Get Room Request
+    Given A Get request is sent
+    Then Response is validated

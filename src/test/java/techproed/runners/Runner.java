@@ -13,8 +13,9 @@ import org.junit.runner.RunWith;
         },
         features = "src/test/resources/features",
         glue = {"techproed/stepdefs"},
-        tags = "@e2e",
+        tags = "",//mvn test "-Dcucumber.filter.tags=@e2e"
         dryRun = false
 )
 public class Runner {
 }
+//sadece @e2e tag'ına sahip senaryoları/spec'leri çalıştırır.
